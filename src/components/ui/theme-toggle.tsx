@@ -11,12 +11,9 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm border border-border/50"
+      className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm border border-border/50 flex items-center justify-center"
     >
-      <motion.div
-        initial={false}
-        animate={{ rotate: theme === 'dark' ? 180 : 0 }}
-        transition={{ duration: 0.4, ease: 'easeInOut' }}
+      <div
         className="relative w-5 h-5"
       >
         <motion.div
@@ -35,7 +32,7 @@ export function ThemeToggle() {
         >
           <LuMoon className="w-5 h-5" />
         </motion.div>
-      </motion.div>
+      </div>
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
